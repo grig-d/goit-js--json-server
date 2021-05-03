@@ -2,7 +2,7 @@
 const BASE_URL = 'http://localhost:3000';
 
 const newBook = {
-  title: 'Тестовая книга по CSS',
+  title: 'New Title',
   author: 'Я',
   genres: ['CSS'],
   rating: 9,
@@ -20,4 +20,5 @@ function addBook(book) {
   return fetch(`${BASE_URL}/books`, options).then(response => response.json());
 }
 
-addBook(newBook);
+// Ошибку можно отлавливать во внешнем коде, т.е. catch привязывать к вызывающей промис функции
+addBook(newBook).catch(error => console.log(error));
