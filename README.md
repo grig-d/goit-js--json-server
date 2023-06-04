@@ -1,1 +1,1 @@
-# js-goit-json-server
+# goit-js--json-server
